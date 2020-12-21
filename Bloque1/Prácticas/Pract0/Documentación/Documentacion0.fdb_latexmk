@@ -1,6 +1,11 @@
 # Fdb version 3
+<<<<<<< HEAD
 ["pdflatex"] 1608533350 "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.tex" "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.pdf" "Documentacion0" 1608533350
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.aux" 1608533350 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+=======
+["pdflatex"] 1608533280 "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.tex" "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.pdf" "Documentacion0" 1608533280
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.aux" 1608533280 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+>>>>>>> 81f12f2 (Práctica 0 hecha, documentación también, primeros adelantos de la práctica 1.)
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.tex" 1608533277 8336 99bb4b08a36ae01e6fb6c1c5150a4f7a ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -103,6 +108,12 @@
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   (generated)
+<<<<<<< HEAD
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.aux"
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.pdf"
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.log"
+=======
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.log"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.pdf"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract0/Documentación/Documentacion0.aux"
+>>>>>>> 81f12f2 (Práctica 0 hecha, documentación también, primeros adelantos de la práctica 1.)

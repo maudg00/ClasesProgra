@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // pract1.c
 //
 // Desarrollado por José Luis Aguilar el 23/12/2020
@@ -43,10 +44,23 @@ void OddSum(int x, int n), EvenSum(int x, int n);
 */
 void CambioDeBase(int num, int base);
 int ValidarEnteroPositivo(float num); 
+=======
+// Bibliotecas a incluir
+#include <stdio.h>
+#include <stdlib.h>
+
+// Funciones a declarar
+void 
+    Author(void), 
+    Description(void),
+    OddSum(int *x, int n),
+    EvenSum(int *x, int n);
+>>>>>>> 81f12f2 (Práctica 0 hecha, documentación también, primeros adelantos de la práctica 1.)
 
 // Main
 int main()
 {
+<<<<<<< HEAD
     clrscr();
     int  option = 0, resultado=0;
     float number = 0, base = 0;
@@ -364,4 +378,86 @@ int ValidarEnteroPositivo(float num)
     {
         return true;
     }
+=======
+    int number = 0; 
+    Author(void);
+    Description(void);
+    Menu(&option);
+
+    exit(1)
+}
+
+void Author(void)
+{
+    printf("Este programa fue desarrollado por José Luis Aguilar.\n"
+           "Presione [Enter] para continuar.");
+    getchar();
+}
+void Description(void)
+{
+    printf("A continuación se le mostrará un menú o se le pide el número whatever");
+}
+
+void SumasConsecutivas(int *X)
+{
+    int n = 1;
+    
+    while (n*(n+1)/2<=X) 
+    {
+        if(X%2==1)
+        {
+            OddSum(&X, 2*n+1)
+        }
+
+        if(X%(2*(n+1))==n+1)
+        {
+            EvenSum(&X, 2*(n+1));
+        }
+
+        n++
+    }
+}
+/* La siguiente función toma como argumento el número a separar en sumas, y el 
+número de términos en los que se separarán las sumas.*/
+void OddSum(int *x, int n)
+{
+    if(*x % (n) == 0) // Validación para que sea correcta la suma.
+        {
+            int sumas[n]; // Se hace un array para facilitar la impresión
+            int offset = (n-1)/2;
+            int ValorInicial = *x/n-offset; // Primer valor en las sumas
+
+    /* Primer término fuera del loop, con el propósito de que al imprimir los
+    valores de la suma, no salga un signo de más. */
+            sumas[0] = ValorInicial;
+            printf("%d sumas consecutivas: \n%d ", n, sumas[0]);
+    
+            for(int i = 1; i < n; i++)
+            {
+                sumas[i] = ValorInicial+i;
+                printf("+ %d", sumas[i]);
+                i++;
+            }
+            printf("\n");
+        }
+    
+}
+
+void EvenSum(int *x, int n)
+{
+    int sumas[n]; // Se hace un array para facilitar la impresión
+    int offset = (n-1)/2;
+    int ValorInicial = *x/n-offset; // Primer valor en las sumas
+    /* Primer término fuera del loop, con el propósito de que al imprimir los
+    valores de la suma, no salga un signo de más. */
+    sumas[0] = ValorInicial;
+    printf("%d sumas consecutivas: \n%d ", sumas[0]);
+    for(int i = 1; i < n; i++)
+    {
+        sumas[i] = ValorInicial+i;
+        printf("+ %d", sumas[i]);
+        i++;
+    }
+    
+>>>>>>> 81f12f2 (Práctica 0 hecha, documentación también, primeros adelantos de la práctica 1.)
 }
