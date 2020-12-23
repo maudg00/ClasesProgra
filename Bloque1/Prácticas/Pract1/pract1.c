@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
 // pract1.c
 //
 // Desarrollado por José Luis Aguilar el 23/12/2020
@@ -11,7 +14,11 @@
 #include <stdio.h>
 #include <math.h>
 #define clrscr() printf("\e[1;1H\e[2J")
+<<<<<<< HEAD
 #define hline "-------------------------------------------------------------------------------"
+=======
+#define hline "--------------------------------------------------------------------------------"
+>>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
 #define true 1
 #define false 0
 
@@ -44,6 +51,7 @@ void OddSum(int x, int n), EvenSum(int x, int n);
 */
 void CambioDeBase(int num, int base);
 int ValidarEnteroPositivo(float num); 
+<<<<<<< HEAD
 =======
 // Bibliotecas a incluir
 #include <stdio.h>
@@ -56,11 +64,16 @@ void
     OddSum(int *x, int n),
     EvenSum(int *x, int n);
 >>>>>>> 81f12f2 (Práctica 0 hecha, documentación también, primeros adelantos de la práctica 1.)
+=======
+>>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
 
 // Main
 int main()
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
     clrscr();
     int  option = 0, resultado=0;
     float number = 0, base = 0;
@@ -108,7 +121,14 @@ fórmula n*(n+1)/2 se convierte en (2n+1)*(2n+2)/2 == (2n+1)*(n+1) */
         EvenSum((int)*X, 2*(n+1));
         n++;
     }
+<<<<<<< HEAD
 
+=======
+    printf("Presione [Enter] para continuar\n");
+    fpurge(stdin);
+    getchar();
+    clrscr();
+>>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
 }
 
 void CambioDeBase(int num, int base)
@@ -148,6 +168,7 @@ void CambioDeBase(int num, int base)
             counter--; // también contiene el overshoot
             digits--;
             num-=residuo;
+<<<<<<< HEAD
             if(counter==10){ printf("A"); }
             else if(counter==11){ printf("B"); }
             else if(counter==12){ printf("C"); }
@@ -155,6 +176,9 @@ void CambioDeBase(int num, int base)
             else if(counter==14){ printf("E"); }
             else if(counter==15){ printf("F"); }
             else{ printf("%d",counter); }
+=======
+            printf("%x",counter);
+>>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
             residuo=0;
             counter=0;
         } 
@@ -169,6 +193,10 @@ void CambioDeBase(int num, int base)
         printf("0");
     }
     printf("\n");
+    printf("Presione [Enter] para continuar.\n");
+    fpurge(stdin);
+    getchar();
+    clrscr();
 }
 
 /* Las siguientes funciones toman como argumento el número a separar en sumas, 
@@ -209,6 +237,7 @@ void EvenSum(int x, int n)
             imprimir los valores de la suma, no salga un signo de más. */
             int sumas = ValorInicial;
             printf("%d sumas consecutivas: \n%d ", n, sumas);
+<<<<<<< HEAD
             for(int i = 1; i < n; i++)
             {
                 sumas = ValorInicial+i;
@@ -460,4 +489,142 @@ void EvenSum(int *x, int n)
     }
     
 >>>>>>> 81f12f2 (Práctica 0 hecha, documentación también, primeros adelantos de la práctica 1.)
+=======
+            for(int i = 1; i < n; i++)
+            {
+                sumas = ValorInicial+i;
+                printf("+ %d ", sumas);
+            }
+            printf("\n");
+        }
+}
+
+int Menu(float *num, float *base)
+{
+    int option = 0, flag=false;
+
+    printf(hline "\n");
+    printf
+    (
+        "\t\t\t\t    Menú\n\t\t\t\t   ------\n"
+        "Escoge una opción escribiendo el número:"
+        "de la acción que desees tomar:\n\n"
+        "\t1. Cambio de base a un número\n"
+        "\t2. Calcular sumas consecutivas de un número\n"
+        "\t3. Salir\n"
+    );
+    printf("\n" hline "\n");
+    scanf("%d",&option);
+    clrscr();
+    if(option==1)
+    {
+        while(true)
+        {
+        printf("Introduzca el número entero positivo a convertir: ");
+        scanf("%f",num);
+        flag = ValidarEnteroPositivo(*num);
+        if(flag==false)
+        { 
+            printf("Ahora regresará al menú.\n"
+            "Presione [Enter] para continuar.\n");
+            fpurge(stdin);
+            getchar();
+            clrscr();
+            break;
+        }
+        printf("Introduzca la base (entre 2 y 16) a la que desea convertir: ");
+        scanf("%f",base);
+        flag = ValidarEnteroPositivo(*base);
+        if(flag==false)
+        { 
+            printf("Ahora regresará al menú.\n"
+            "Presione [Enter] para continuar.\n");
+            fpurge(stdin);
+            getchar();
+            clrscr();
+            break; 
+        }
+        CambioDeBase((int)*num,(int)*base);
+        fpurge(stdin);
+        break;
+        }
+        clrscr();
+    }
+    else if(option==2)
+    {
+        while(true)
+        {
+            printf("Introduzca el número entero positivo a mostrar sus sumas: ");
+            scanf("%f",num);
+            flag = ValidarEnteroPositivo(*num);
+            if(flag==false)
+            { 
+                printf("Ahora regresará al menú.\n"
+                "Presione [Enter] para continuar.\n");
+                fpurge(stdin);
+                getchar();
+                clrscr();
+                break; 
+            }
+            SumasConsecutivas(num);
+            fpurge(stdin);
+            break;
+        }
+    }
+    else if(option==3)
+    {
+        return Quit();
+    }
+    else
+    {
+        printf("La opción introducida no es válida. Intente de nuevo.\n");
+        fpurge(stdin);
+        getchar();
+        clrscr();
+        return 0;
+    }
+    return 0;
+}
+
+int Quit(void)
+{
+    int flag = 0;
+    printf(hline"\n\n\n\t\t\t\t  Desea salir?\n\n"
+    "\t\t\t\t1 = sí, 0 = no.\n\n\n\n"hline"\n");
+    scanf("%d",&flag);
+    clrscr();
+    if(flag!=0)
+    {
+        if(flag!=1)
+        {
+            printf(hline"\n\n\n\nLa opción introducida no fue válida. Se regresará al menú.\n"
+            "Presione [Enter] para continuar.\n\n\n\n"hline"\n");
+            fpurge(stdin);
+            getchar();
+            clrscr();
+            return 0;
+        }
+    }
+    return flag;
+}
+
+int ValidarEnteroPositivo(float num)
+{
+    if(num<=0)
+    {
+        printf("El número introducido es menor a 0. Intente de nuevo.\n");
+        fpurge(stdin);
+        return false;
+    }
+    else if(num - (int)num != 0)
+    {
+        printf("El número introducido no es entero. Intente de nuevo.\n");
+        fpurge(stdin);
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+>>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
 }
