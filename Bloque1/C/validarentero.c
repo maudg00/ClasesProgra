@@ -6,6 +6,7 @@
 #define true 1
 #define false 0
 /* Function prototypes */
+
 /*
 * La función pedirYValidarNum  se encarga de oedir un numero y validar que sea entero.
 *
