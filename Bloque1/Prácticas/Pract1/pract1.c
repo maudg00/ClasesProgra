@@ -15,10 +15,14 @@
 #include <math.h>
 #define clrscr() printf("\e[1;1H\e[2J")
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define hline "-------------------------------------------------------------------------------"
 =======
 #define hline "--------------------------------------------------------------------------------"
 >>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
+=======
+#define hline "-------------------------------------------------------------------------------"
+>>>>>>> 0bd1dc1 (Inicio documentación práctica 1. Bugs práctica 1 arreglados.)
 #define true 1
 #define false 0
 
@@ -507,7 +511,7 @@ int Menu(float *num, float *base)
     printf
     (
         "\t\t\t\t    Menú\n\t\t\t\t   ------\n"
-        "Escoge una opción escribiendo el número:"
+        "Escoge una opción escribiendo el número "
         "de la acción que desees tomar:\n\n"
         "\t1. Cambio de base a un número\n"
         "\t2. Calcular sumas consecutivas de un número\n"
