@@ -1,4 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  30 DEC 2020 12:13
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  24 DEC 2020 17:25
+>>>>>>> 7efb4b3 (Escribo comentarios a examen)
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  30 DEC 2020 12:11
+>>>>>>> a96135a (Documentación casi terminada)
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  30 DEC 2020 12:13
+>>>>>>> 7ddec67 (Restauro mis archivos para las clases de Progra)
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -636,15 +648,39 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
 [3]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+=======
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
+[3
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+>>>>>>> 7efb4b3 (Escribo comentarios a examen)
+=======
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+>>>>>>> a96135a (Documentación casi terminada)
  (/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
+<<<<<<< HEAD
+<<<<<<< HEAD
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
+=======
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+>>>>>>> 7efb4b3 (Escribo comentarios a examen)
+=======
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
+>>>>>>> a96135a (Documentación casi terminada)
 
 
 Package rerunfilecheck Warning: File `Documentacion1.out' has changed.
@@ -660,21 +696,53 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
  ) 
 Here is how much of TeX's memory you used:
  10593 strings out of 480608
  157059 string characters out of 5903631
+=======
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+ ) 
+Here is how much of TeX's memory you used:
+ 10550 strings out of 480608
+ 156425 string characters out of 5903631
+>>>>>>> 7efb4b3 (Escribo comentarios a examen)
+=======
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
+ ) 
+Here is how much of TeX's memory you used:
+ 10593 strings out of 480608
+ 157059 string characters out of 5903631
+>>>>>>> a96135a (Documentación casi terminada)
  544426 words of memory out of 5000000
  26183 multiletter control sequences out of 15000+600000
  576287 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,11n,37p,388b,1857s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+<<<<<<< HEAD
+<<<<<<< HEAD
 Output written on /Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf (3 pages, 143759 bytes).
 PDF statistics:
  228 PDF objects out of 1000 (max. 8388607)
  208 compressed objects within 3 object streams
  131 named destinations out of 1000 (max. 500000)
+=======
+Output written on /Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf (3 pages, 140281 bytes).
+PDF statistics:
+ 176 PDF objects out of 1000 (max. 8388607)
+ 157 compressed objects within 2 object streams
+ 88 named destinations out of 1000 (max. 500000)
+>>>>>>> 7efb4b3 (Escribo comentarios a examen)
+=======
+Output written on /Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf (3 pages, 143759 bytes).
+PDF statistics:
+ 228 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 131 named destinations out of 1000 (max. 500000)
+>>>>>>> a96135a (Documentación casi terminada)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

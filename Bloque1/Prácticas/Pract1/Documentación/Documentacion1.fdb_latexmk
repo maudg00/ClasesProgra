@@ -1,8 +1,29 @@
 # Fdb version 3
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 ["pdflatex"] 1609351983 "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf" "Documentacion1" 1609351983
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux" 1609351983 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out" 0 -1 0 "pdflatex"
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" 1609351981 14250 feaa3c691d4e58d511786e560737b2fb ""
+=======
+["pdflatex"] 1608852301 "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf" "Documentacion1" 1608852301
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux" 1608852301 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out" 0 -1 0 "pdflatex"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" 1608852299 12818 11fd6f521880f940330bab000647c529 ""
+>>>>>>> 7efb4b3 (Escribo comentarios a examen)
+=======
+["pdflatex"] 1609351873 "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf" "Documentacion1" 1609351873
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux" 1609351873 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out" 0 -1 0 "pdflatex"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" 1609351864 14250 feaa3c691d4e58d511786e560737b2fb ""
+>>>>>>> a96135a (Documentación casi terminada)
+=======
+["pdflatex"] 1609351983 "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf" "Documentacion1" 1609351983
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux" 1609351983 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out" 0 -1 0 "pdflatex"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.tex" 1609351981 14250 feaa3c691d4e58d511786e560737b2fb ""
+>>>>>>> 7ddec67 (Restauro mis archivos para las clases de Progra)
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -120,7 +141,27 @@
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   (generated)
+<<<<<<< HEAD
+<<<<<<< HEAD
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.log"
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf"
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux"
   "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out"
+=======
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out"
+=======
+>>>>>>> a96135a (Documentación casi terminada)
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.log"
+<<<<<<< HEAD
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux"
+<<<<<<< HEAD
+>>>>>>> 7efb4b3 (Escribo comentarios a examen)
+=======
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf"
+>>>>>>> a96135a (Documentación casi terminada)
+=======
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.pdf"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.aux"
+  "/Users/joseluisaguilarcharfen/Documents/Proyectos/Progra/ClasesProgra/Bloque1/Prácticas/Pract1/Documentación/Documentacion1.out"
+>>>>>>> 7ddec67 (Restauro mis archivos para las clases de Progra)

@@ -126,6 +126,7 @@ fórmula n*(n+1)/2 se convierte en (2n+1)*(2n+2)/2 == (2n+1)*(n+1) */
         n++;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     printf("Presione [Enter] para continuar\n");
@@ -133,6 +134,9 @@ fórmula n*(n+1)/2 se convierte en (2n+1)*(2n+2)/2 == (2n+1)*(n+1) */
     getchar();
     clrscr();
 >>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
+=======
+
+>>>>>>> f30c75d (Examen terminado, avances en documentación de la práctica 1.)
 }
 
 void CambioDeBase(int num, int base)
@@ -173,6 +177,9 @@ void CambioDeBase(int num, int base)
             digits--;
             num-=residuo;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f1516bd (Corregí práctica 1, ahora imprime con letras y no abusa del escribir en hexadecimal)
             if(counter==10){ printf("A"); }
             else if(counter==11){ printf("B"); }
             else if(counter==12){ printf("C"); }
@@ -180,9 +187,12 @@ void CambioDeBase(int num, int base)
             else if(counter==14){ printf("E"); }
             else if(counter==15){ printf("F"); }
             else{ printf("%d",counter); }
+<<<<<<< HEAD
 =======
             printf("%x",counter);
 >>>>>>> 5ccbecb (Práctica 1 ya es funcional, falta hacer la documentación.)
+=======
+>>>>>>> f1516bd (Corregí práctica 1, ahora imprime con letras y no abusa del escribir en hexadecimal)
             residuo=0;
             counter=0;
         } 
@@ -197,10 +207,6 @@ void CambioDeBase(int num, int base)
         printf("0");
     }
     printf("\n");
-    printf("Presione [Enter] para continuar.\n");
-    fpurge(stdin);
-    getchar();
-    clrscr();
 }
 
 /* Las siguientes funciones toman como argumento el número a separar en sumas, 
@@ -501,6 +507,7 @@ void EvenSum(int *x, int n)
             }
             printf("\n");
         }
+    }
 }
 
 int Menu(float *num, float *base)
@@ -524,33 +531,62 @@ int Menu(float *num, float *base)
     {
         while(true)
         {
-        printf("Introduzca el número entero positivo a convertir: ");
-        scanf("%f",num);
-        flag = ValidarEnteroPositivo(*num);
-        if(flag==false)
-        { 
-            printf("Ahora regresará al menú.\n"
-            "Presione [Enter] para continuar.\n");
+            printf("Introduzca el número entero positivo a convertir: ");
+            scanf("%f",num);
+            flag = ValidarEnteroPositivo(*num);
+            if(flag==false)
+            { 
+                printf("Ahora regresará al menú.\n"
+                "Presione [Enter] para continuar.\n");
+                fpurge(stdin);
+                getchar();
+                clrscr();
+                break;
+            }
+            printf("Introduzca la primera base (entre 2 y 16) a la que desea convertir: ");
+            scanf("%f",base);
+            flag = ValidarEnteroPositivo(*base);
+            if(flag==false)
+            { 
+                printf("Ahora regresará al menú.\n"
+                "Presione [Enter] para continuar.\n");
+                fpurge(stdin);
+                getchar();
+                clrscr();
+                break; 
+            }
+            CambioDeBase((int)*num,(int)*base);
+            printf("Introduzca la segunda base (entre 2 y 16) a la que desea convertir: ");
+            scanf("%f",base);
+            flag = ValidarEnteroPositivo(*base);
+            if(flag==false)
+            { 
+                printf("Ahora regresará al menú.\n"
+                "Presione [Enter] para continuar.\n");
+                fpurge(stdin);
+                getchar();
+                clrscr();
+                break; 
+            }
+            CambioDeBase((int)*num,(int)*base);
+            printf("Introduzca la tercera base (entre 2 y 16) a la que desea convertir: ");
+            scanf("%f",base);
+            flag = ValidarEnteroPositivo(*base);
+            if(flag==false)
+            { 
+                printf("Ahora regresará al menú.\n"
+                "Presione [Enter] para continuar.\n");
+                fpurge(stdin);
+                getchar();
+                clrscr();
+                break; 
+            }
+            CambioDeBase((int)*num,(int)*base);
+            printf("Presione [Enter] para continuar.\n");
             fpurge(stdin);
             getchar();
             clrscr();
             break;
-        }
-        printf("Introduzca la base (entre 2 y 16) a la que desea convertir: ");
-        scanf("%f",base);
-        flag = ValidarEnteroPositivo(*base);
-        if(flag==false)
-        { 
-            printf("Ahora regresará al menú.\n"
-            "Presione [Enter] para continuar.\n");
-            fpurge(stdin);
-            getchar();
-            clrscr();
-            break; 
-        }
-        CambioDeBase((int)*num,(int)*base);
-        fpurge(stdin);
-        break;
         }
         clrscr();
     }
@@ -571,7 +607,10 @@ int Menu(float *num, float *base)
                 break; 
             }
             SumasConsecutivas(num);
+            printf("Presione [Enter] para continuar\n");
             fpurge(stdin);
+            getchar();
+            clrscr();
             break;
         }
     }
