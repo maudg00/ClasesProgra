@@ -12,8 +12,7 @@ struct Definicion_Pacientes
 };
 typedef struct Definicion_Pacientes Paciente;
 char Menu();
-void pedirTamano(int *tamano, Paciente **listaPacientes);
-void pedirPacientes(int tamano, Paciente *listaPacientes);
+void pedirPacientes(int *tamano, Paciente **listaPacientes);
 void imprimirPacientes(int tamano, Paciente listaPacientes[10]);
 int main()
 {
@@ -26,8 +25,7 @@ int main()
         switch(opcion)
         {
             case '1':
-                pedirTamano(&tamano, &listaPacientes);
-                pedirPacientes(tamano, listaPacientes);
+                pedirPacientes(&tamano, &listaPacientes);
             break;
             case '2':
                 imprimirPacientes(tamano, listaPacientes);
@@ -40,7 +38,7 @@ int main()
             break;
         }
     } while (opcion!='3');
-    free(listaPacientes);
+    
 }
 char Menu()
 {
@@ -53,42 +51,39 @@ char Menu()
     fflush(stdin);
     return op;
 }
-void pedirTamano(int *tamano, Paciente **listaPacientes)
-{
-    printf("Cuantos pacientes vas a ingresar? ");
-    scanf("%d", tamano);
-    fflush(stdin);
-    *listaPacientes=malloc(*tamano*sizeof(Paciente));
-}
-void pedirPacientes(int tamano, Paciente *listaPacientes)
+void pedirPacientes(int *tamano, Paciente **listaPacientes)
 {
     int i;
     char Nombre[20], condicionClinica[100];
     int edad;
     float altura, peso;
-    for(i=0; i<tamano; i++)
+    printf("Cuantos pacientes vas a ingresar? ");
+    scanf("%d", tamano);
+    fflush(stdin);
+    *listaPacientes=malloc(*tamano*sizeof(Paciente));
+    for(i=0; i<*tamano; i++)
     {
         printf("Paciente %d: \n", (i+1));
         printf("\tNombre: ");
         fgets(Nombre, 18, stdin);
         Nombre[strlen(Nombre)-1]=0;
-        strcpy(listaPacientes[i].Nombre, Nombre);
+        strcpy((*listaPacientes)[i].Nombre, Nombre);
         printf("\tEdad: ");
         scanf("%d", &edad);
         fflush(stdin);
-        listaPacientes[i].edad=edad;
+        (*listaPacientes)[i].edad=edad;
         printf("\tPeso: ");
         scanf("%f", &peso);
-        listaPacientes[i].peso=peso;
+        (*listaPacientes)[i].peso=peso;
         fflush(stdin);
         printf("\tAltura: ");
         scanf("%f", &altura);
         fflush(stdin);
-        listaPacientes[i].altura=altura;
+        (*listaPacientes)[i].altura=altura;
         printf("\tCondicion Clinica: ");
         fgets(condicionClinica, 98, stdin);
         condicionClinica[strlen(condicionClinica)-1]=0;
-        strcpy(listaPacientes[i].condicionClinica, condicionClinica);
+        strcpy((*listaPacientes)[i].condicionClinica, condicionClinica);
     }
 }
 void imprimirPacientes(int tamano, Paciente listaPacientes[10])
