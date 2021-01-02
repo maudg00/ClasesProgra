@@ -46,16 +46,18 @@ void llenarMatriz(int **Matriz, int filas, int columnas)
     }
 }
 void imprimirMatriz(int **Matriz, int filas, int columnas)
-{
-    int i, j;
+{ // YA TIENE LAS SUMAS CONSIDERADAS
+    int i, j, sumas;
     printf("Aqui esta tu matriz: \n");
-    for(i=0; i<filas; i++)
+    for(i=0; i<filas; i++) 
     {
+        sumas = 0;
         printf("\t");
         for(j=0; j<columnas; j++)
         {
             printf("%03d ", Matriz[i][j]);
+            sumas += Matriz[i][j];
         }
-        printf("\n");
+        printf("<– La suma de esta fila es: %d \n", sumas);
     }
 }
