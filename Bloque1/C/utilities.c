@@ -151,3 +151,32 @@ void utilitiesStringToLower(char *string)
         string[i]=tolower(string[i]);
     }
 }
+void utilitiesLlenarArregloEnteros(int * arreglo, int tamano)
+{
+    for(int i=0; i<tamano; i++)
+    {
+        printf("Dame el valor %d del arreglo: ", (i+1));
+        scanf("%d", &arreglo[i]);
+        fflush(stdin);
+    }
+}
+/*
+* La función utilitiesImprimirArregloEnteros se encarga de imprimir un arreglo de enteros
+*
+*
+* @params
+*   int * arreglo, el arreglo de enteros.
+*   int tamano, el tamano del arreglo
+* 
+*
+* @returns
+*
+*
+*/
+void utilitiesImprimirArregloEnteros(int * arreglo, int tamano)
+{
+    for(int i=0; i<tamano; i++)
+    {
+        printf("Arreglo[%d]=%d", (i+1), arreglo[i]);
+    }
+}

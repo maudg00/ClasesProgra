@@ -115,6 +115,34 @@ EXTERN void utilitiesStringToUpper(char *string);
 *
 */
 EXTERN void utilitiesStringToLower(char *string);
+/*
+* La función utilitiesLlenarArregloEnteros se encarga de llenar
+*
+*
+* @params
+*   int * arreglo, el arreglo de enteros.
+*   int tamano, el tamano del arreglo
+* 
+*
+* @returns
+*
+*
+*/
+EXTERN void utilitiesLlenarArregloEnteros(int * arreglo, int tamano);
+/*
+* La función utilitiesImprimirArregloEnteros se encarga de imprimir un arreglo de enteros
+*
+*
+* @params
+*   int * arreglo, el arreglo de enteros.
+*   int tamano, el tamano del arreglo
+* 
+*
+* @returns
+*
+*
+*/
+EXTERN void utilitiesImprimirArregloEnteros(int * arreglo, int tamano);
 #undef utilities_IMPORT
 #undef EXTERN
 #endif
