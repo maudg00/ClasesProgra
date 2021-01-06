@@ -151,12 +151,29 @@ void utilitiesStringToLower(char *string)
         string[i]=tolower(string[i]);
     }
 }
+/*
+* La función utilitiesDeclararArregloEntero se encarga de declarar dinamicamente un arreglo entero.
+*
+*
+* @params
+*   int ** arreglo, la direccion de memoria del arreglo a declarar.
+*   int tamano, el tamano del arreglo.
+* 
+*
+* @returns
+*
+*
+*/
+void utilitiesDeclararArregloEntero(int **arreglo, int tamano)
+{
+    *arreglo=malloc((tamano)*sizeof(int));
+}
 void utilitiesLlenarArregloEnteros(int * arreglo, int tamano)
 {
     for(int i=0; i<tamano; i++)
     {
         printf("Dame el valor %d del arreglo: ", (i+1));
-        scanf("%d", &arreglo[i]);
+        scanf("%d", arreglo+i);
         fflush(stdin);
     }
 }
@@ -177,23 +194,29 @@ void utilitiesImprimirArregloEnteros(int * arreglo, int tamano)
 {
     for(int i=0; i<tamano; i++)
     {
-        printf("Arreglo[%d]=%d", (i+1), arreglo[i]);
+        printf("Arreglo[%d]=%d", (i+1), arreglo+i);
     }
 }
 /*
-* La función utilitiesDeclararArregloEntero se encarga de declarar dinamicamente un arreglo entero.
+* La función utilitiesDeclararMatrizEnteros se encarga de declarar una matriz dinámica.
 *
 *
 * @params
-*   int ** arreglo, la direccion de memoria del arreglo a declarar.
-*   int tamano, el tamano del arreglo.
+*   int *** matriz, la dirección de memoria de la matriz.
+*   int filas, las filas de la matriz.
+*   int columnas, las columnas de la matriz.
 * 
 *
 * @returns
 *
 *
 */
-void utilitiesDeclararArregloEntero(int **arreglo, int tamano)
+void utilitiesDeclararMatrizEnteros(int ***Matriz, int filas, int columnas)
 {
-    *arreglo=malloc((tamano)*sizeof(int));
+    int i;
+    *Matriz=malloc((filas)*sizeof(int*));
+    for(i=0; i<columnas; i++)
+    {
+        *(*Matriz+i)=malloc((columnas)*sizeof(int));
+    }
 }

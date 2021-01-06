@@ -157,7 +157,21 @@ EXTERN void utilitiesLlenarArregloEnteros(int * arreglo, int tamano);
 *
 */
 EXTERN void utilitiesImprimirArregloEnteros(int * arreglo, int tamano);
-
+/*
+* La función utilitiesDeclararMatrizEnteros se encarga de declarar una matriz dinámica.
+*
+*
+* @params
+*   int *** matriz, la dirección de memoria de la matriz.
+*   int filas, las filas de la matriz.
+*   int columnas, las columnas de la matriz.
+* 
+*
+* @returns
+*
+*
+*/
+EXTERN void utilitiesDeclararMatrizEnteros(int ***Matriz, int filas, int columnas);
 #undef utilities_IMPORT
 #undef EXTERN
 #endif
