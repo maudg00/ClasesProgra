@@ -116,7 +116,21 @@ EXTERN void utilitiesStringToUpper(char *string);
 */
 EXTERN void utilitiesStringToLower(char *string);
 /*
-* La función utilitiesLlenarArregloEnteros se encarga de llenar
+* La función utilitiesDeclararArregloEntero se encarga de declarar dinamicamente un arreglo entero.
+*
+*
+* @params
+*   int ** arreglo, la direccion de memoria del arreglo a declarar.
+*   int tamano, el tamano del arreglo.
+* 
+*
+* @returns
+*
+*
+*/
+EXTERN void utilitiesDeclararArregloEntero(int **arreglo, int tamano);
+/*
+* La función utilitiesLlenarArregloEnteros se encarga de llenar un arreglo.
 *
 *
 * @params
@@ -143,6 +157,7 @@ EXTERN void utilitiesLlenarArregloEnteros(int * arreglo, int tamano);
 *
 */
 EXTERN void utilitiesImprimirArregloEnteros(int * arreglo, int tamano);
+
 #undef utilities_IMPORT
 #undef EXTERN
 #endif

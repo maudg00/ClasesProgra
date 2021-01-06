@@ -180,3 +180,20 @@ void utilitiesImprimirArregloEnteros(int * arreglo, int tamano)
         printf("Arreglo[%d]=%d", (i+1), arreglo[i]);
     }
 }
+/*
+* La función utilitiesDeclararArregloEntero se encarga de declarar dinamicamente un arreglo entero.
+*
+*
+* @params
+*   int ** arreglo, la direccion de memoria del arreglo a declarar.
+*   int tamano, el tamano del arreglo.
+* 
+*
+* @returns
+*
+*
+*/
+void utilitiesDeclararArregloEntero(int **arreglo, int tamano)
+{
+    *arreglo=malloc((tamano)*sizeof(int));
+}
