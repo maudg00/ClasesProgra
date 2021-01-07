@@ -212,3 +212,25 @@ void utilitiesDeclararMatrizEnteros(int ***Matriz, int filas, int columnas)
         *(*Matriz+i)=malloc((columnas)*sizeof(int));
     }
 }
+/*
+* La función utilitiesLiberarMatrizEnteros se encarga de liberar una matriz de enteros que fue inicializada dinámicamente.
+*
+*
+* @params
+*   @param int*** Matriz, la dirección de memoria de la matriz.
+*   @param int filas, las filas de la matriz.
+*   @param int columnas, las columnas de la matriz.
+* 
+*
+* @returns
+*
+*
+*/
+void utilitiesDeclararMatrizEnteros(int **Matriz, int filas, int columnas)
+{
+    for(int i=0; i<filas; i++)
+    {
+        free(Matriz[i]);
+    }
+    free(Matriz);
+}

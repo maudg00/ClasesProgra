@@ -169,6 +169,21 @@ EXTERN void utilitiesImprimirArregloEnteros(int * arreglo, int tamano);
 *
 */
 EXTERN void utilitiesDeclararMatrizEnteros(int ***Matriz, int filas, int columnas);
+/*
+* La función utilitiesLiberarMatrizEnteros se encarga de liberar una matriz de enteros que fue inicializada dinámicamente.
+*
+*
+* @params
+*   @param int** Matriz, la matriz a liberar.
+*   @param int filas, las filas de la matriz.
+*   @param int columnas, las columnas de la matriz.
+* 
+*
+* @returns
+*
+*
+*/
+EXTERN void utilitiesDeclararMatrizEnteros(int **Matriz, int filas, int columnas);
 #undef utilities_IMPORT
 #undef EXTERN
 #endif
