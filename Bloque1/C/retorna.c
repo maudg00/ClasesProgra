@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define true 1
 #define false 0
 int pedirNumero();
@@ -48,5 +49,4 @@ int pedirCoeficientes(int *a, int *b, int *c)
     {
         return true;
     }
-    
 }

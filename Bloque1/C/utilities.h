@@ -183,7 +183,7 @@ EXTERN void utilitiesDeclararMatrizEnteros(int ***Matriz, int filas, int columna
 *
 *
 */
-EXTERN void utilitiesDeclararMatrizEnteros(int **Matriz, int filas, int columnas);
+EXTERN void utilitiesLiberarMatrizEnteros(int **Matriz, int filas, int columnas);
 #undef utilities_IMPORT
 #undef EXTERN
 #endif

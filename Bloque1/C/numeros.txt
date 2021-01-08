@@ -1,0 +1,6 @@
+Numero 1: 253
+Numero 2: 52
+Numero 3: 31
+Numero 4: 53
+Numero 5: 123
+Numero 6: 23

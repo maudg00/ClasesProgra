@@ -164,6 +164,18 @@ void utilitiesDeclararArregloEntero(int **arreglo, int tamano)
 {
     *arreglo=malloc((tamano)*sizeof(int));
 }
+/*
+* La función utilitiesLlenarArregloEnteros se encarga de llenar un arreglo.
+*
+*
+* @param int * arreglo, el arreglo de enteros.
+* @param int tamano, el tamano del arreglo
+* 
+*
+* @return
+*
+*
+*/
 void utilitiesLlenarArregloEnteros(int * arreglo, int tamano)
 {
     for(int i=0; i<tamano; i++)
@@ -189,7 +201,7 @@ void utilitiesImprimirArregloEnteros(int * arreglo, int tamano)
 {
     for(int i=0; i<tamano; i++)
     {
-        printf("Arreglo[%d]=%d", (i+1), arreglo+i);
+        printf("Arreglo[%d]=%d\n", (i+1), *(arreglo+i));
     }
 }
 /*
@@ -226,7 +238,7 @@ void utilitiesDeclararMatrizEnteros(int ***Matriz, int filas, int columnas)
 *
 *
 */
-void utilitiesDeclararMatrizEnteros(int **Matriz, int filas, int columnas)
+void utilitiesLiberarMatrizEnteros(int **Matriz, int filas, int columnas)
 {
     for(int i=0; i<filas; i++)
     {
