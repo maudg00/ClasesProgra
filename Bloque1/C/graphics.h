@@ -63,7 +63,7 @@ Hecho el 8 de enero de 2021
 * Imprime una paleta de colores y tipos de fuentes en la terminal.
 * 
 */
-void graphicsPallette(void);
+EXTERN void graphicsPallette(void);
 
 #undef graphics_IMPORT
 #undef EXTERN
