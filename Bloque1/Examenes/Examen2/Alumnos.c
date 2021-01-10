@@ -100,6 +100,7 @@ void AlumnosArchivo(int tamano, Alumno **Alumnos)
     fclose(students);
     printf("\nArchivo \"alumnos.txt\" generado.\n");
 }
+
 /* Método para hacer lista de alumnos en terminal. */
 void callAlumnos(void)
 {
@@ -110,5 +111,6 @@ void callAlumnos(void)
     AlumnosLlenar(num, &Lista);
     AlumnosArchivo(num, &Lista);
     utilitiesEnter();
+    free(Lista);
     clrscr();
 }
