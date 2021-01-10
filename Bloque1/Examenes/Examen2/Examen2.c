@@ -9,6 +9,7 @@ char MenuExamen(void);
 void DescripcionExamen();
 int ControlExamen(char option);
 void CuadroMagico(int num);
+void Alumnos(Alumno **ListaAlumnos);
 void Quit();
 
 
@@ -39,35 +40,35 @@ char MenuExamen(void)
     fpurge(stdin);
     return option;
 }
+
 void DescripcionExamen(void)
 {
     clrscr();
-    printf(hline"\n\n"
+    printf(hline"\n\n\n"
 "Este es el examen de Jose Luis Aguilar de la clase de programacion en C. \n"
-"A continuación se le mostrará un menú.\n\n\n"hline);
+"A continuación se le mostrará un menú.\n\n\n"hline"\n");
     utilitiesEnter();
     clrscr();
 }
 
-void Alumnos(Alumno **ListaAlumnos)
-{
 
-}
 
 int ControlExamen(char option)
 {
     int indice=0, num=0;
     double resultado=0;
+    Alumno *Lista;
     switch (option)
     {
     case '1':
+        clrscr();
         do
         {
             printf("A continuación se le pedirá un entero impar(entre 1 y 11) para construir\n"
-            "un cuadro mágico.");
+            "un cuadro mágico.\n");
             utilitiesEnter();
             indice = utilitiesPedirEntero();
-            if(!(indice>1&&indice<=11) || indice%2 == 0 || utilitiesValidarEntero==FALSE)
+            if(!(indice>1&&indice<=11) || indice%2 == 0 || utilitiesValidarEntero(indice)==FALSE)
             {
                 printf("Por favor introduzca un valor válido\n");
                 utilitiesEnter();
@@ -80,9 +81,16 @@ int ControlExamen(char option)
         return 0;
     break;
     case '2':
+        clrscr();
+        AlumnosDeclarar(&num, &Lista);
+        AlumnosLlenar(num, &Lista);
+        AlumnosArchivo(num, &Lista);
+        utilitiesEnter();
+        clrscr();
         return 0;
     break;
     case '3':
+        clrscr();
         printf("Introduzca el valor a buscar de la serie de Fibonacci: ");
         scanf("%d",&indice);
         fpurge(stdin);
@@ -93,6 +101,7 @@ int ControlExamen(char option)
         return 0;
     break;
     case '4':
+        clrscr();
         printf("Introduzca el valor a obtener su factorial: ");
         scanf("%d",&indice);
         fpurge(stdin);
@@ -103,11 +112,13 @@ int ControlExamen(char option)
         return 0;
     break;
     case '5':
+        clrscr();
         Quit();
         return 0;
     break;
     default:
-        printf("Introduzca una opción válida.\n");
+        clrscr();
+        printf(hline"\n\nIntroduzca una opción válida.\n\n\n"hline);
         utilitiesEnter();
         clrscr();
         return 1;
@@ -117,6 +128,6 @@ int ControlExamen(char option)
 
 void Quit(void)
 {
-    printf("Muchas gracias por usar el programa. Hasta luego.\n");
+    printf(hline "\n\nMuchas gracias por usar el programa. Hasta luego.\n\n\n\n" hline);
     exit(0);
 }

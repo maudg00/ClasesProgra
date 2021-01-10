@@ -1,13 +1,5 @@
 #include "Alumnos.h"
 
-struct Definicion_Alumno
-{
-    char Nombre[50];
-    int grado;
-    int califNumer;
-    char Letra;
-};
-typedef struct Definicion_Alumno Alumno;
 
 void AlumnosDeclarar(int *tamano, Alumno **ListaAlumnos)
 {
@@ -18,7 +10,7 @@ void AlumnosDeclarar(int *tamano, Alumno **ListaAlumnos)
     *ListaAlumnos = malloc(*tamano * sizeof(Alumno));
 }
 
-char NumerALetra(int calificacion)
+char NumerALetra(float calificacion)
 {
     char Letra;
     if(calificacion>=9) { return 'A'; }
@@ -28,7 +20,7 @@ char NumerALetra(int calificacion)
     else { return 'F'; }
 }
 
-int validarCalif(int num)
+int validarCalif(float num)
 {
     if(num<0 || num>10)
     {
@@ -54,9 +46,7 @@ int validarGrade(int grado)
 
 void AlumnosLlenar(int tamano, Alumno **Alumnos)
 {
-    char Nombre[50];
-    int grado, califNumer;
-    char califLetra;
+    char Nombre[50]; int flag;
     for(int i=0; i<tamano; i++)
     {
         printf("Alumno %d:\n",i+1);
@@ -67,7 +57,7 @@ void AlumnosLlenar(int tamano, Alumno **Alumnos)
         // Llena grado.
         do
         {
-            printf("\tEscriba el grado del alumno: (1o,2o, o 3o)");
+            printf("\tEscriba el grado del alumno (1o, 2o, o 3o): ");
             scanf("%do",&(*Alumnos+i)->grado);
             fpurge(stdin);
         
@@ -75,11 +65,11 @@ void AlumnosLlenar(int tamano, Alumno **Alumnos)
         // Llena calificación numérica
         do
         {
-            printf("\tEscriba la calificacion numerica del alumno:");
-            scanf("%d",&(*Alumnos+i)->califNumer);
+            printf("\tEscriba la calificacion numerica del alumno: ");
+            flag = scanf("%f",&(*Alumnos+i)->califNumer);
             fpurge(stdin);
         } 
-        while(validarCalif((*Alumnos+i)->califNumer)==FALSE);
+        while(validarCalif((*Alumnos+i)->califNumer)==FALSE ||  flag==0);
         // Llenar letra: No necesita pedirse desde terminal.
         (*Alumnos+i)->Letra = NumerALetra((*Alumnos+i)->califNumer);
     }
@@ -87,9 +77,9 @@ void AlumnosLlenar(int tamano, Alumno **Alumnos)
 
 void AlumnosArchivo(int tamano, Alumno **Alumnos)
 {
-    FILE * students=fopen("Alumnos.txt","wt");
+    FILE * students=fopen("alumnos.txt","wt");
 
-    fprintf(students,"Lista de estudiantes:\n");
+    fprintf(students,"Lista de estudiantes:\n\n");
 
     for(int i=0; i<tamano; i++)
     {
@@ -98,7 +88,7 @@ void AlumnosArchivo(int tamano, Alumno **Alumnos)
             students,
             "Alumno %d: %s\n\t"
             "Grado: %do\n\t"
-            "Calificacion Numerica: %d\n\t"
+            "Calificacion Numerica: %f\n\t"
             "Calificacion en letra: %c\n\n",
             i+1,
             (*Alumnos+i)->Nombre,
@@ -107,5 +97,6 @@ void AlumnosArchivo(int tamano, Alumno **Alumnos)
             (*Alumnos+i)->Letra
             );
     }
-
+    fclose(students);
+    printf("\nArchivo \"alumnos.txt\" generado.\n");
 }

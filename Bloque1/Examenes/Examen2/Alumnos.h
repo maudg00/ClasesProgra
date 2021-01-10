@@ -18,7 +18,13 @@
     #define EXTERN extern
 #endif
 
-EXTERN struct Definicion_Alumno;
+EXTERN struct Definicion_Alumno
+{
+    char Nombre[50];
+    int grado;
+    float califNumer;
+    char Letra;
+};
 EXTERN typedef struct Definicion_Alumno Alumno;
 
 /*                       function prototypes                        */
