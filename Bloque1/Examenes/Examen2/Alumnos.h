@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include "utilities.h"
 #define TRUE 1
 #define FALSE 0
 #ifndef Alumnos_h
@@ -17,6 +18,7 @@
 #else
     #define EXTERN extern
 #endif
+#define clrscr() printf("\e[1;1H\e[2J")
 
 EXTERN struct Definicion_Alumno
 {
@@ -35,6 +37,8 @@ EXTERN void AlumnosLlenar(int tamano, Alumno **Alumnos);
 
 EXTERN void AlumnosArchivo(int tamano, Alumno **Alumnos);
 
+/* Método para hacer lista de alumnos en terminal. */
+EXTERN void callAlumnos(void);
 
 #undef Alumnos_IMPORT
 #undef EXTERN

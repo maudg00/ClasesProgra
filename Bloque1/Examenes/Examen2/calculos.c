@@ -34,3 +34,35 @@ double Factorial(int num)
     value *=Factorial(num-1);
     return value;
 }
+
+// Calls:
+
+/* Método para llamar la función Fibonacci con breve interfaz. */
+void callFibonacci()
+{
+    int num;
+    float resultado;
+    clrscr();
+    printf("Introduzca el valor a buscar de la serie de Fibonacci: ");
+    scanf("%d",&num);
+    fpurge(stdin);
+    resultado = Fibonacci(num);
+    printf("El valor %d de Fibonacci es: %.0f\n",num,resultado);
+    utilitiesEnter();
+    clrscr();
+}
+
+/* Método para llamar la función factorial con breve interfaz. */
+void callFactorial()
+{
+    int num;
+    float resultado;
+    clrscr();
+    printf("Introduzca el valor a obtener su factorial: ");
+    scanf("%d",&num);
+    fpurge(stdin);
+    resultado = Factorial(num);
+    printf("El factorial de %d es: %.0f\n",num,resultado);
+    utilitiesEnter();
+    clrscr();
+}

@@ -88,7 +88,7 @@ void AlumnosArchivo(int tamano, Alumno **Alumnos)
             students,
             "Alumno %d: %s\n\t"
             "Grado: %do\n\t"
-            "Calificacion Numerica: %f\n\t"
+            "Calificacion Numerica: %.2f\n\t"
             "Calificacion en letra: %c\n\n",
             i+1,
             (*Alumnos+i)->Nombre,
@@ -99,4 +99,16 @@ void AlumnosArchivo(int tamano, Alumno **Alumnos)
     }
     fclose(students);
     printf("\nArchivo \"alumnos.txt\" generado.\n");
+}
+/* Método para hacer lista de alumnos en terminal. */
+void callAlumnos(void)
+{
+    int num=0;
+    Alumno *Lista;
+    clrscr();
+    AlumnosDeclarar(&num, &Lista);
+    AlumnosLlenar(num, &Lista);
+    AlumnosArchivo(num, &Lista);
+    utilitiesEnter();
+    clrscr();
 }
