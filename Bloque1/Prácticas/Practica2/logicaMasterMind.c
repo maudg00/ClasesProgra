@@ -3,6 +3,7 @@
 #include <math.h>
 #include <time.h>
 #include <string.h>
+#include <ctype.h>
 
 
 /******************************************************************************
@@ -98,6 +99,7 @@ char* crearPasswordRepeated(long int seed, int length)
     *(Password+length) = 0; 
     return Password;
 }
+
 /******************************************************************************
 
 Crea un password de 7 tipos de caracteres distintos usando un algoritmo de
@@ -135,6 +137,21 @@ char* crearPassword(long int seed, int length)
     return Password;
 }
 
+/* INSERTAR DOCUMENTACION PENDIENTE */
+int CheckPositionPWD(char * Pwd, char * Attempt)
+{
+    int count = 0;
+    int length = strlen(Pwd);
+    for(int i=0; i<length; i++)
+    {
+        if(*(Pwd+i)==toupper(*(Attempt+i)))
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
 /******************************************************************************
 @fn
 Revisa un password introducido contra un patrón.
@@ -146,7 +163,7 @@ Revisa un password introducido contra un patrón.
 @returns int: 0 si es correcta, -1 si es incorrecta. 
 
 *******************************************************************************/
-int CheckPassword(const int length, char * Pwd, char * Attempt)
+int CheckPassword(char * Pwd, char * Attempt)
 {
     int position=0, color=0;
 
@@ -157,8 +174,8 @@ int CheckPassword(const int length, char * Pwd, char * Attempt)
     } 
     else
     {
-        position = CheckPositionPWD(length, Pwd, Attempt);
-        color = CheckColorsPWD(length,Pwd,Attempt);
+        position = CheckPositionPWD(Pwd, Attempt);
+        color = CheckColorsPWD(Pwd,Attempt);
         printf("Tiene %d colores correctos, con %d en la posición correcta.\n",
         color, position);
         return -1;
