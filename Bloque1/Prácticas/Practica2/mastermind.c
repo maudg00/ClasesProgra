@@ -11,7 +11,7 @@ hacer trampa, o rendirse.
 @author José Luis Aguilar Charfén <aguilarch.joseluis@gmail.com>
 @author Tania Cesin Abou Atme <MailDeTaniaXd>
 
-11 de enero de 2021.
+13 de enero de 2021.
 
 #include "logicaMasterMind.h"
 
