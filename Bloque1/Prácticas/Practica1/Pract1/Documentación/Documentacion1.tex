@@ -17,6 +17,8 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 \definecolor{terminalbg}{rgb}{00.01,0.01,0.01}
 \definecolor{terminaltext}{rgb}{0.95,0.95,0.95}
+\definecolor{codedark}{rgb}{0.8, 0.2, 0.5}
+\definecolor{codered}{rgb}{1,0.2,0.2}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -24,6 +26,8 @@
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
+    emphstyle=\color{codedark},
+    tagstyle =\color{codered},
     basicstyle=\ttfamily,
     breakatwhitespace=true,         
     breaklines=true,  
@@ -35,7 +39,7 @@
     showspaces=false,                
     showstringspaces=false,
     showtabs=false,      
-    tabsize=2
+    tabsize=2,
 }
 
 \lstdefinestyle{terminal}{
@@ -195,7 +199,7 @@ un pequeño pseudocódigo correspondiente al final de cada algoritmo.
         \end{equation*}
         Entonces, considerando que $\lfloor\log_b(x)\rfloor$ es el número de dígitos
         necesarios para expresar a $x$ en la base $b$, puede encontrarse el valor de cada uno con un sencillo algoritmo descrito en el siguiente pseudocódigo:
-        \begin{lstlisting}[style=mystyle]
+        \begin{lstlisting}[style=mystyle,    language=C]
 cambio de base (int numero, int base)
     ValidarEnteroPositivo(numero);
     ValidarEnteroPositivo(base);
