@@ -137,7 +137,14 @@ char* crearPassword(long int seed, int length)
     return Password;
 }
 
-/* INSERTAR DOCUMENTACION PENDIENTE */
+/* Revisa cuántos dígitos coinciden en posición con la contraseña.
+* 
+* @param char* Pwd: Contraseña contra la que se compara
+* @param char* Attempt: contraseña intentada
+*
+* @returns Número de dígitos que coinciden en posición con la contraseña.
+*
+*/
 int CheckPositionPWD(char * Pwd, char * Attempt)
 {
     int count = 0;
@@ -152,8 +159,38 @@ int CheckPositionPWD(char * Pwd, char * Attempt)
     return count;
 }
 
+/* Revisa cuántos colores coinciden con la contraseña sin importar posición
+*
+* NOTA JL: Tengo la impresión que es muy optimizable esta función, pero no lo 
+* he intentado optimizar.
+*
+* @param char* Pwd: Contraseña contra la que se compara
+* @param char* Attempt: Intento contra el que se compara
+*
+* @returns Número de colores que coinciden.
+*
+*/
+int CheckColorsPWD(const char* Pwd, char* Attempt)
+{
+    const short length = strlen(Pwd);
+    int count;
+    for(int i=0;i<length;i++)
+    {
+        for(int j=0; j<length; j++)
+        {
+            if(toupper(*(Pwd+i))== *(Attempt+j))
+            {
+                *(Attempt+j) = 0;
+                count++;
+                break;
+            }
+        }
+    }
+    return count;
+}
+
 /******************************************************************************
-@fn
+
 Revisa un password introducido contra un patrón.
 
 @param number int length - Longitud de la contraseña.
