@@ -51,4 +51,4 @@ char HistorialLeerArchivo()
 *
 *
 */
-void HistorialVaciar(char *nomArch)
+void HistorialVaciar(char * nomArch)
