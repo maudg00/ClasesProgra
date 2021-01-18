@@ -1,10 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <time.h>
-#include <string.h>
-#include <ctype.h>
-
+#include "logicaMasterMind.h"
 
 /******************************************************************************
 
@@ -82,7 +76,7 @@ generación lineal, dado un seed y una longitud de contraseña.
 Pueden encontrarse repetidos. 
 
 *******************************************************************************/
-char* crearPasswordRepeated(long int seed, int length)
+char * crearPasswordRepeated(long int seed, int length)
 {
     char * Password; // PWD de 4 caracteres debido a naturaleza del juego.
     unsigned short int residue;
@@ -112,7 +106,7 @@ generación lineal, dado un seed y una longitud de contraseña.
 Pueden encontrarse repetidos. 
 
 *******************************************************************************/
-char* crearPassword(long int seed, int length)
+char * crearPassword(long int seed, int length)
 {
     char * Password; // PWD de 4 caracteres debido a naturaleza del juego.
     char * Choice = "RAYMBNC";
@@ -206,7 +200,7 @@ int CheckPassword(char * Pwd, char * Attempt)
 
     if(strcasecmp(Pwd,Attempt)==0)
     {
-        printf("La contraseña es correcta!! Su valor era: %s\n",*Pwd);
+        printf("La contraseña es correcta!! Su valor era: %s\n",Pwd);
         return 0;
     } 
     else
