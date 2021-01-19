@@ -18,21 +18,28 @@ hacer trampa, o rendirse.
 #include "files.h"
 */
 #include "utilities.h"
+#include "logicaMasterMind.h"
+#include "time.h"
 #include <stdio.h>
 #include <stdlib.h>
 #define TRUE 1
 #define FALSE 0
-
 
 int main()
 {
     char option;
     scanf("%c",&option);
     fpurge(stdin);
+    struct timespec spec;
 
     switch (option)
     {
     case '1':
+        crearPassword(clock_gettime(CLOCK_REALTIME,&spec),4);
+        while(TRUE)
+        {
+            
+        }
         /* Jugar */
     break;
 
