@@ -9,8 +9,8 @@ Recibe una semilla y devuelve un número aleatorizado módulo a
 @returns long int aleatorizado.
 
 *******************************************************************************/
-long int LCG(long int seed)
-{
+unsigned long int LCG(unsigned long int seed)
+{ 
     long long m = pow(2,48);
     long int a = 0x5DEECE66D;
     int c = 11;
@@ -76,12 +76,12 @@ generación lineal, dado un seed y una longitud de contraseña.
 Pueden encontrarse repetidos. 
 
 *******************************************************************************/
-char * crearPasswordRepeated(long int seed, int length)
+char * crearPasswordRepeated(unsigned long int seed, int length)
 {
     char * Password; // PWD de 4 caracteres debido a naturaleza del juego.
     unsigned short int residue;
 
-    Password = malloc((length+1)*sizeof(char)); 
+    Password = malloc((length+1)*sizeof(char*)); 
 
     for(int i=0;i<length;i++)
     {
@@ -106,28 +106,29 @@ generación lineal, dado un seed y una longitud de contraseña.
 Pueden encontrarse repetidos. 
 
 *******************************************************************************/
-char * crearPassword(long int seed, int length)
+char * crearPassword(unsigned long int seed, int length)
 {
-    char * Password; // PWD de 4 caracteres debido a naturaleza del juego.
-    char * Choice = "RAYMBNC";
-    unsigned short int residue, tmp, j=0;
+    char * Password=NULL; // PWD de 4 caracteres debido a naturaleza del juego.
+    char Choice[8] = "RAYMBNC\0";
+    char tmp;
+    unsigned short int residue;
 
-    Password = malloc((length+1)*sizeof(char)); 
+    Password = malloc((length+1)*sizeof(char*)); 
 
-    for(int i=strlen(Choice)-1;i<length;i--)
+    for(int i=strlen(Choice)-1;i>0;i--)
     {
+        printf("Estado de la contraseña: %s\n",Choice);
         seed = LCG(seed);
         residue = seed%(i+1);
+
         //Shuffle:
-        tmp = *(Choice+residue);
-        *(Choice+residue) = *(Choice+i);
-        *(Choice+i) = tmp;
-        //Assign values from shuffle
-        *(Password+j) = *(Choice+i);
-        j++;
+        tmp = Choice[residue];
+        Choice[residue] = Choice[i];
+        Choice[i] = tmp;
+        
     }
-    // Con el fin de poder comparar strings más fácilmente, el último es null.
-    *(Password+length) = 0; 
+    
+    strncpy(Password,Choice,length);
     return Password;
 }
 

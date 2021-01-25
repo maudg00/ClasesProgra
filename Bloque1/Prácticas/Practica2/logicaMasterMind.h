@@ -11,7 +11,7 @@
     #define EXTERN extern
 #endif
 
-/*
+/**
 *
 * Recibe una semilla y devuelve un número aleatorizado módulo a
 *
@@ -20,9 +20,9 @@
 * @returns long int aleatorizado.
 *
 */
-long int LCG(long int seed);
+unsigned long int LCG(unsigned long int seed);
 
-/*
+/**
 *
 * Toma un valor entre 0 y 6
 *
@@ -33,7 +33,7 @@ long int LCG(long int seed);
 */
 char AssignValuePWD(unsigned short int value);
 
-/*
+/**
 *
 * Crea un password de 7 tipos de caracteres distintos usando un algoritmo de
 * generación lineal, dado un seed y una longitud de contraseña. 
@@ -45,9 +45,9 @@ char AssignValuePWD(unsigned short int value);
 * Pueden encontrarse repetidos. 
 *
 */
-char * crearPasswordRepeated(long int seed, int length);
+char * crearPasswordRepeated(unsigned long int seed, int length);
 
-/*
+/**
 *
 * Crea un password de 7 tipos de caracteres distintos usando un algoritmo de
 * generación lineal, dado un seed y una longitud de contraseña. 
@@ -59,9 +59,9 @@ char * crearPasswordRepeated(long int seed, int length);
 * Pueden encontrarse repetidos. 
 *
 */
-char * crearPassword(long int seed, int length);
+char * crearPassword(unsigned long int seed, int length);
 
-/* Revisa cuántos dígitos coinciden en posición con la contraseña.
+/** Revisa cuántos dígitos coinciden en posición con la contraseña.
 * 
 * @param char* Pwd: Contraseña contra la que se compara
 * @param char* Attempt: contraseña intentada
@@ -72,7 +72,7 @@ char * crearPassword(long int seed, int length);
 int CheckPositionPWD(char * Pwd, char * Attempt);
 
 // ! NOTA JL: Tengo la impresión que es muy optimizable esta función
-/* 
+/** 
 * Revisa cuántos colores coinciden con la contraseña sin importar posición
 *
 * @param char* Pwd: Contraseña contra la que se compara
@@ -83,7 +83,7 @@ int CheckPositionPWD(char * Pwd, char * Attempt);
 */
 int CheckColorsPWD(const char* Pwd, char* Attempt);
 
-/*
+/**
 *
 * Revisa un password introducido contra un patrón.
 *
