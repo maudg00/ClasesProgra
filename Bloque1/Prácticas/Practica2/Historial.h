@@ -12,7 +12,7 @@
 /* Function prototypes. */
 
 
-/*
+/**
 * La función HistorialAppendArchivo se encarga de llenar el historial
 *
 *
@@ -24,7 +24,8 @@
 *
 */
 EXTERN void HistorialAppendArchivo(char * Attempt);
-/*
+
+/**
 * La función HistorialLeerArchivo se encarga de leer el historial
 *
 *

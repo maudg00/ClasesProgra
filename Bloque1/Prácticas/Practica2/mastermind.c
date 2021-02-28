@@ -28,37 +28,55 @@ hacer trampa, o rendirse.
 int main()
 {
     char option;
-    scanf("%c",&option);
-    fpurge(stdin);
+    char * Password;
+    int LP = 4; // ! ES LA LONGITUD DEL PASSWORD; por si gustamos cambiarla.
+    int lives = LP*(LP+1)/2; // Vidas disponibles para jugar; luego configuro --JL
     struct timespec spec;
-
-    switch (option)
-    {
-    case '1':
-        crearPassword(clock_gettime(CLOCK_REALTIME,&spec),4);
-        while(TRUE)
-        {
-            
-        }
-        /* Jugar */
-    break;
-
-    case '2':
-        /* Leaderboard */
-    break;
-
-    case '3':
-        /* Opciones (Dificultad) */
-    break;
-
-    case '4':
-        /* Salir */
-    break;
     
-    default:
-        printf("Introduzca una opción válida por favor.\n");
-        utilitiesEnter();
-    break;
+    while(TRUE)
+    {   
+        scanf("%c",&option);
+        fpurge(stdin);
+        switch (option)
+            {
+            case '1':
+                crearPassword(clock_gettime(CLOCK_REALTIME,&spec),LP);
+                while(lives>0)
+                {
+                    fgets(Password,LP+2,stdin);
+                    validatePassword();
+                    *(Password+LP) = 0; // Siempre se asegura que sea máximo la longitud
+                                        // del password.
+                    switch (strlen(Password))
+                    {
+                    case 1:
+                        SettingsHandle(Password);
+                    break;
+                    case 4:
+                        
+                    break;
+                    default:
+                    printf("Introduzca una opción válida.\n");
+                    break;
+                    }
+                }
+                /* Jugar */
+            break;
+            case '2':
+                /* Leaderboard */
+            break;
+            case '3':
+                /* Opciones (Dificultad) */
+            break;
+            case '4':
+                /* Salir */
+            break;
+            
+            default:
+                printf("Introduzca una opción válida por favor.\n");
+                utilitiesEnter();
+            break;
+            }
     }
     return 0;
 }
