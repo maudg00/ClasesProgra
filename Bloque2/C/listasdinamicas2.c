@@ -1,7 +1,6 @@
 #include "utilities.h"
 struct StructAlumnos
 {
-
     int calificacion;
     int semestre;
     char Nombre[30];
@@ -15,11 +14,14 @@ void darBaja(Alumnos **Inicio);
 void modificar(Alumnos *Inicio);
 void imprimir(Alumnos *Inicio);
 void liberar(Alumnos **Inicio);
+void escribirArchivo(Alumnos *Inicio);
+void leerArchivo(Alumnos **Inicio);
 int main()
 {
     Alumnos* Inicio;
     char opcion;
     Inicio=NULL;
+    leerArchivo(&Inicio);
     do
     {
         system("cls");
@@ -39,6 +41,7 @@ int main()
                 imprimir(Inicio);
             break;
             case '5':
+                escribirArchivo(Inicio);
                 liberar(&Inicio);
                 printf("Gracias por usar el programa.\n");
             break;
@@ -227,4 +230,98 @@ void liberar(Alumnos **Inicio)
         free(temp);
     }
     
+}
+void escribirArchivo(Alumnos *Inicio)
+{
+    char NombreArch[50];
+    char ruta[100];
+    FILE * Archivo;
+    Alumnos *temp;
+    if(Inicio==NULL)
+    {
+        printf("No se puede escribir achivo: Lista vacia.\n");
+        return;
+    }
+    ruta[0]=0;
+    printf("Dime el nombre del archivo, sin extension: ");
+    fgets(NombreArch, 50, stdin);
+    utilitiesQuitarEnterString(NombreArch);
+    strcat(NombreArch,".csv");
+    strcat(ruta, "./AlumnosArchivos/");
+    strcat(ruta,NombreArch);
+    if((strcmp(ruta, "./AlumnosArchivos/.csv"))==0)
+    {
+        return;
+    }
+    Archivo=fopen(ruta, "wt");
+    temp=Inicio;
+    fprintf(Archivo, "Nombre,FechaNacimiento,Semestre,Calificacion\n");
+    while(temp!=NULL)
+    {
+        fprintf(Archivo, "%s, %s, %d, %d\n",temp->Nombre, temp->fechaN, temp->semestre, temp->calificacion);
+        temp=temp->Siguiente;
+    }
+    fclose(Archivo);
+}
+void leerArchivo(Alumnos **Inicio)
+{
+    char NombreArch[50];
+    char ruta[100];
+    char basura[50];
+    char lineaActual[100];
+    FILE * Archivo;
+    Alumnos *temp;
+    ruta[0]=0;
+    printf("Dime el nombre del archivo, sin extension: ");
+    fgets(NombreArch, 50, stdin);
+    utilitiesQuitarEnterString(NombreArch);
+    strcat(NombreArch,".csv");
+    strcat(ruta, "./AlumnosArchivos/");
+    strcat(ruta,NombreArch);
+    Archivo=fopen(ruta, "rt");
+    if(Archivo==NULL)
+    {
+        printf("ERROR: no existe el archivo.\n");
+        return;
+    }
+    
+    //Leer primera linea que no nos sirve de nada.
+    fgets(basura,50,Archivo);
+    while((fgets(lineaActual, 100, Archivo))!=NULL)
+    {
+        Alumnos *temp;
+        Alumnos *recorrer;
+        utilitiesQuitarEnterString(lineaActual);
+        temp=malloc(sizeof(Alumnos));
+        sscanf(lineaActual, "%s %s %d, %d", temp->Nombre, temp->fechaN, &temp->semestre, &temp->calificacion);
+        utilitiesQuitarEnterString(temp->Nombre);
+        utilitiesQuitarEnterString(temp->fechaN);
+        temp->Siguiente=NULL;
+        if((*Inicio)==NULL)
+        {
+            *Inicio=temp;
+        }
+        else
+        {
+            recorrer=(*Inicio);
+            while(recorrer->Siguiente!=NULL)
+            {
+                recorrer=recorrer->Siguiente;
+            }
+            recorrer->Siguiente=temp;
+        }
+    }
+    fclose(Archivo);
+}
+void push(Alumnos **Inicio, Alumnos NuevoAlumno)
+{
+    if(*Inicio==NULL)
+    {
+        *Inicio=&NuevoAlumno;
+        return;
+    }
+    Alumnos *recorre=*Inicio;
+    while(recorre->Siguiente!=NULL)
+        recorre=recorre->Siguiente;
+    recorre->Siguiente=&NuevoAlumno;
 }
