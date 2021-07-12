@@ -1,0 +1,17 @@
+puedeRecibirDaño=true;
+MIENTRAS QUE vidas > 1
+{
+    si (tocas a LINEAROJA)
+    {
+        si puedeRecibirDaño=true
+        {
+            DISMINUYE vidas POR 1;
+            puedeRecibirDaño=false;
+            TELETRANSPORTAR a PADDLE;
+        }
+        else <-- Aqui va a entrar cuando toque la linea roja al teletransportarse al paddle
+        {
+            puedeRecibirDaño=true;
+        }
+    }
+}
