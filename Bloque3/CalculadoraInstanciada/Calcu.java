@@ -17,9 +17,17 @@ public class Calcu
             double b = sc.nextDouble();
             System.out.println("Dame el coeficiente c:");
             double c = sc.nextDouble();
-            miCalculadora.ecuacion2do(a,b,c);
-            System.out.println("Raiz x1: "+miCalculadora.x1);
-            System.out.println("Raiz x2: "+miCalculadora.x2);
+            try
+            {
+                miCalculadora.ecuacion2do(a,b,c);
+                System.out.println("Raiz x1: "+miCalculadora.x1);
+                System.out.println("Raiz x2: "+miCalculadora.x2);
+            }
+            catch(Exception e)
+            {
+                System.out.println(e);
+            }
+            
             sc.close();
         }
     }

@@ -27,9 +27,17 @@ class Calculadora
         this.ANS=a/b;
         return this.ANS;
     }
-    public void ecuacion2do(double a, double b, double c)
+    public void ecuacion2do(double a, double b, double c) throws Exception
     {
-        this.x1=(-b-Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a);
-        this.x2=(-b+Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a);
+        if((Math.pow(b,2))<(4*a*c))
+        {
+            throw new Exception("Numero imaginario, raices negativas.");
+        }
+        else
+        {
+            this.x1=(-b-Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a);
+            this.x2=(-b+Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a);
+        }
+        
     }
 }
