@@ -1,0 +1,28 @@
+PASSWORD MANAGER:
+¿Para qué sirve?
+A) No tener la misma contraseña en todos lados.
+B) No se me pueden olvidar.
+C) No son NADA comunes.
+D) Vas a poder tener tus contraseñas en un archivo, y aunque alguien lo encuentre, no te pueden hackear.
+¿Cómo funciona?
+Digamos que mi contraseña favorita es "holasoytania123", esa quiero que sea mi contraseña en todos lados. Yo voy a tener mi archivo donde guardo tania3@gmail.com,Facebook,holasoytania123.
+Sin embargo, mi contraseña que METO en facebook, no es "holasoytania123", si no un encriptado de este. Por ejemplo, 0x12394.
+Además, si manejamos colisiones, esto me permite tener varias veces la misma contraseña pero que el encriptado sea diferente. Ejemplo:
+tania3@gmail.com,Facebook,holasoytania123
+tania3@gmail.com,Twitter,holasoytania123
+Sin embargo, la encriptación de facebook es 0x12394, y la de twitter es 0x47613. Esto me permite tener 2 contraseñas diferentes en cada página, a pesar de que en realidad son la misma contraseña,
+solo con diferente encriptado gracias a manejo de colisiones y tablas de hash.
+El encriptado en realidad es un número int, pero se imprime en hexadecimal o base 64 (ustedes escogan).
+
+Requerimientos:
+El programa tiene un menú para:
+	a) cargar archivo.
+	b) guardar archivo
+	c) ver contrasenias.
+	d) meter contrasenia.
+	e) salir.
+El programa debe de usar CLASES. 
+Deben de hacer su diagrama UML de clases.
+SIGAN EL PARADIGMA ORIENTADO A OBJETOS, NO SE VALE HACER UN PROGRAMA SECUENCIAL COMO SI FUERA DE C TRADUCIDO A JAVA.
+Buenas prácticas de P.O.O: cohesión, reutilización de código, buen encapsulamiento. UTILICEN MODIFICADORES DE ACCESO.
+ 
