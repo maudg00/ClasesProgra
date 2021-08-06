@@ -12,7 +12,7 @@ public class vista
     {
         //Instancio mi controlador/mi "listener" y el layout que deseo.
         controlador miControlador=new controlador();
-        GridLayout miLayout=new GridLayout(2,2);
+        GridLayout miLayout=new GridLayout(3,2);
         //Instancio mi Frame y le digo su layout.
         this.miFrame= new JFrame();
         this.miFrame.setLayout(miLayout);
@@ -32,6 +32,10 @@ public class vista
         this.miFrame.add(miBoton2);
         this.miFrame.add(miBoton3);
         this.miFrame.add(miBoton4);
+        //Agrego el panel.
+        panelEjemplo miPanel= new panelEjemplo();
+        miPanel.botonInutil.addActionListener(miControlador);
+        this.miFrame.add(miPanel);
         //Que se vea
         this.miFrame.setVisible(true);
     }

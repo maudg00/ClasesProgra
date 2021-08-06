@@ -25,6 +25,9 @@ public class controlador implements ActionListener{
             case "Multi":
                 modelo.funcionMulti();
             break;
+            case "Si sirvo!":
+                modelo.funcionSirvo();
+            break;
         }
     }
 

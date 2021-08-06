@@ -15,4 +15,8 @@ public class modelo {
     {
         System.out.println("2*2 es = " + (2*2));
     }
+    public static void funcionSirvo()
+    {
+        System.out.println("Ahora sabes usar paneles y varias clases :)");
+    }
 }
