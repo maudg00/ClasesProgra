@@ -8,6 +8,7 @@ public class vista
     public JButton miBoton2;
     public JButton miBoton3;
     public JButton miBoton4;
+    public static JTextArea miResultado;
     vista()
     {
         //Instancio mi controlador/mi "listener" y el layout que deseo.
@@ -22,6 +23,7 @@ public class vista
         this.miBoton2=new JButton("Suma");
         this.miBoton3=new JButton("Resta");
         this.miBoton4=new JButton("Multi");
+        vista.miResultado=new JTextArea();
         //Ligo botones a controlador.
         this.miBoton.addActionListener(miControlador);
         this.miBoton2.addActionListener(miControlador);
@@ -32,10 +34,12 @@ public class vista
         this.miFrame.add(miBoton2);
         this.miFrame.add(miBoton3);
         this.miFrame.add(miBoton4);
-        //Agrego el panel.
+        //Agrego el panel y el textArea
         panelEjemplo miPanel= new panelEjemplo();
         miPanel.botonInutil.addActionListener(miControlador);
         this.miFrame.add(miPanel);
+        this.miFrame.add(vista.miResultado);
+        vista.miResultado.setText("Aqui estara el resultado");
         //Que se vea
         this.miFrame.setVisible(true);
     }

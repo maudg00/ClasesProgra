@@ -1,22 +1,24 @@
 public class modelo {
-    public static void funcionPrueba()
+    public static String funcionPrueba()
     {
-        System.out.println("Hola mundo!");
+        String resultado="Hola Mundo!";
+        return resultado;
     }
-    public static void funcionSuma()
+    public static int funcionSuma(int num1, int num2)
     {
-        System.out.println("2+2 es = " + (2+2));
+        return num1+num2;
     }
-    public static void funcionResta()
+    public static int funcionResta(int num1, int num2)
     {
-        System.out.println("2-2 es = " + (2-2));
+        return num1-num2;
     }
-    public static void funcionMulti()
+    public static int funcionMulti(int num1, int num2)
     {
-        System.out.println("2*2 es = " + (2*2));
+        return num1*num2;
     }
-    public static void funcionSirvo()
+    public static String funcionSirvo()
     {
-        System.out.println("Ahora sabes usar paneles y varias clases :)");
+        String resultado="Ahora sabes usar paneles y varias clases :)";
+        return resultado;
     }
 }

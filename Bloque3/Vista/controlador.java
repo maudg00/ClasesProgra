@@ -11,22 +11,31 @@ public class controlador implements ActionListener{
         JButton caller=(JButton)evento.getSource();
         String textoBoton=caller.getText();
         System.out.println("Me llamo el objeto: " + textoBoton);
+        int num1=(Integer)panelEjemplo.numero1.getValue();
+        int num2=(Integer)panelEjemplo.numero2.getValue();
+        int resultadoNum;
+        String resultadoString;
         switch(textoBoton)
         {
             case "Prueba!":
-                modelo.funcionPrueba();
+                resultadoString=modelo.funcionPrueba();
+                vista.miResultado.setText(resultadoString);
             break;
             case "Suma":
-                modelo.funcionSuma();
+                resultadoNum=modelo.funcionSuma(num1, num2);
+                vista.miResultado.setText(String.valueOf(resultadoNum));
             break;
             case "Resta":
-                modelo.funcionResta();
+                resultadoNum=modelo.funcionResta(num1, num2);
+                vista.miResultado.setText(String.valueOf(resultadoNum));
             break;
             case "Multi":
-                modelo.funcionMulti();
+                resultadoNum=modelo.funcionMulti(num1, num2);
+                vista.miResultado.setText(String.valueOf(resultadoNum));
             break;
             case "Si sirvo!":
-                modelo.funcionSirvo();
+                resultadoString=modelo.funcionSirvo();
+                vista.miResultado.setText(resultadoString);
             break;
         }
     }
