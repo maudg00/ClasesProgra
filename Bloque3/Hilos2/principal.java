@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.Semaphore;
 
@@ -10,6 +11,7 @@ public class principal
         int numHilos;
         System.out.println("Dime cuantos hilos quieres: ");
         numHilos=miScan.nextInt();
+        compartidas.numeros=new ArrayList<Integer>();
         hilo[] miHilos=new hilo[numHilos];
         for(int i=0; i<numHilos; i++)
         {

@@ -10,20 +10,13 @@ public class hilo implements Runnable{
     public void run()
     {
         Random RNG= new Random();
-        int miNum=RNG.nextInt(2);
+        int miNum=RNG.nextInt(100);
         System.out.println("Me llama el hilo "+nombreHilo + " con el id "+this.id());
         // INICIO SECCIÓN CRÍTICA
         try {
             compartidas.mutexLock.acquire();
-            if(miNum==0)
-            {
-                compartidas.num--;
-            }
-            else
-            {
-                compartidas.num++;
-            }
-            System.out.println(compartidas.num);
+            compartidas.numeros.add(miNum);
+            System.out.println(compartidas.numeros);
             compartidas.mutexLock.release();
         } catch (Exception e) {
             System.out.println(e.getMessage());
